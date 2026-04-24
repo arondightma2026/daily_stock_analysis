@@ -166,7 +166,7 @@ jobs:
         run: |
           cd ${{ github.workspace }}
           # 添加 reports 目录（如果为空也添加，保持目录结构）
-          git add reports/ || true
+          git add -f reports/ || true
           # 检查是否有变更
           if git diff --staged --quiet; then
             echo "📭 reports 目录无变化，无需提交"
